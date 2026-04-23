@@ -18,11 +18,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'kamikaze-gold': '#d4af37',
-                        'kamikaze-gold-light': '#f3e5ab',
-                        'kamikaze-dark': '#0f0f0f',
-                        'kamikaze-gray': '#1a1a1a',
-                        'kamikaze-light': '#f5f5f5',
+                        'kamikaze-gold': '#B89B72', /* 落ち着いたアッシュゴールドに変更 */
+                        'kamikaze-gold-light': '#D4C1A0',
+                        'kamikaze-dark': '#121212', /* 真っ黒からマットなダークグレーへ */
+                        'kamikaze-gray': '#1E1E1E', /* 少し明るめのグレー */
+                        'kamikaze-light': '#E5E5E5',
                     },
                     fontFamily: {
                         sans: ['"Noto Sans JP"', 'sans-serif'],
@@ -37,25 +37,21 @@
 
     <style>
         body {
-            background-color: #0f0f0f;
-            color: #f5f5f5;
+            background-color: #121212;
+            color: #E5E5E5;
         }
         .bg-hero {
-            background-image: linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.95)), url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80');
+            background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80');
             background-size: cover;
             background-position: center;
         }
-        .text-gradient-gold {
-            background: linear-gradient(to right, #f3e5ab, #d4af37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        /* text-gradient-gold を削除しました */
         .card-hover {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 25px -5px rgba(184, 155, 114, 0.15); /* ホバー時の影も控えめに */
         }
     </style>
 </head>
@@ -122,11 +118,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
             <div class="max-w-3xl">
                 <p class="text-kamikaze-gold font-medium tracking-widest mb-4">IBARAKI RYUGASAKI / WEEKEND ONLY</p>
-                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
                     週末の数時間で、<br>
-                    愛車に<span class="text-gradient-gold">究極の輝き</span>を。
+                    愛車に<span class="text-kamikaze-gold">究極の輝き</span>を。
                 </h1>
-                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-light">
                     茨城県龍ケ崎市を拠点とする、週末稼働型の完全予約制ハイエンド・カーディテーリング。<br>
                     ガソリンスタンドの手洗い洗車では満足できない方へ。<br>
                     一人の熟練施工者が、最初から最後まで責任を持って仕上げます。
@@ -343,23 +339,25 @@
     </section>
 
     <!-- Works Section (SNS) -->
-    <section id="works" class="py-24 bg-[#1a1a1a] border-y border-white/5">
+    <section id="works" class="py-24 bg-[#161616] border-y border-white/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">最新の<span class="text-kamikaze-gold">施工事例</span></h2>
             <div class="w-24 h-1 bg-kamikaze-gold mx-auto mb-8"></div>
-            <p class="text-gray-300 mb-12 text-lg leading-relaxed">
+            <p class="text-gray-400 mb-12 text-lg leading-relaxed font-light">
                 当店のコーティング施工実績や、劇的なビフォーアフターの様子は、<br class="hidden md:block">
                 公式InstagramおよびThreadsにて随時公開しております。<br>
                 プロの技術が引き出す、圧倒的な艶と輝きをぜひご覧ください。
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href="https://www.instagram.com/ryugasaki_auto_detailing?igsh=ZndmeHBtOXhndGx4" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white rounded-full font-bold hover:opacity-90 transition-opacity duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <!-- Instagram Button (落ち着いたデザインに変更) -->
+                <a href="https://www.instagram.com/ryugasaki_auto_detailing?igsh=ZndmeHBtOXhndGx4" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-kamikaze-gray border border-gray-700 text-gray-300 rounded-full font-medium hover:border-[#E1306C] hover:text-[#E1306C] transition-all duration-300 shadow-md hover:shadow-lg">
                     <i data-lucide="instagram" class="w-6 h-6"></i>
                     Instagramで事例を見る
                 </a>
                 
-                <a href="https://www.threads.com/@ryugasaki_auto_detailing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-black border border-gray-600 text-white rounded-full font-bold hover:bg-gray-900 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <!-- Threads Button (落ち着いたデザインに変更) -->
+                <a href="https://www.threads.com/@ryugasaki_auto_detailing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-kamikaze-gray border border-gray-700 text-gray-300 rounded-full font-medium hover:border-white hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
                     <i data-lucide="at-sign" class="w-6 h-6"></i>
                     Threadsで最新情報を確認
                 </a>
@@ -368,25 +366,26 @@
     </section>
 
     <!-- Booking Section -->
-    <section id="booking" class="py-24 bg-gradient-to-b from-[#141414] to-kamikaze-dark border-t border-kamikaze-gold/10">
+    <section id="booking" class="py-24 bg-kamikaze-dark border-t border-kamikaze-gold/10">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">ご予約・お問い合わせ</h2>
-            <p class="text-gray-300 mb-10 text-lg">
+            <p class="text-gray-300 mb-10 text-lg font-light">
                 当店は週末（土・日・祝）のみ稼働する<strong class="text-kamikaze-gold font-bold">完全予約制</strong>となっております。<br>
                 ご予約、空き状況の確認、車種サイズのお見積もり等は、すべて公式LINEより承っております。
             </p>
             
-            <div class="bg-kamikaze-gray p-8 rounded-2xl border border-white/10 shadow-2xl inline-block w-full max-w-lg mx-auto">
-                <i data-lucide="message-circle" class="w-12 h-12 text-[#06C755] mx-auto mb-4"></i>
+            <div class="bg-kamikaze-gray p-8 rounded-2xl border border-white/5 shadow-xl inline-block w-full max-w-lg mx-auto">
+                <i data-lucide="message-circle" class="w-10 h-10 text-[#06C755] mx-auto mb-4"></i>
                 <h3 class="text-2xl font-bold text-white mb-2">公式LINEからご予約・相談</h3>
-                <p class="text-sm text-gray-400 mb-8">お友だち追加後、トーク画面より直接メッセージにて「ご希望のメニュー」や「希望日時」をお気軽にお知らせください。</p>
+                <p class="text-sm text-gray-400 mb-8 font-light">お友だち追加後、トーク画面より直接メッセージにて「ご希望のメニュー」や「希望日時」をお気軽にお知らせください。</p>
                 
-                <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-[#06C755] text-white rounded-full font-bold text-lg hover:bg-[#05b34c] transition-all duration-300 shadow-[0_0_20px_rgba(6,199,85,0.3)] hover:shadow-[0_0_30px_rgba(6,199,85,0.5)] flex justify-center items-center gap-2">
+                <!-- LINE Button (光る影を消して落ち着いたデザインに) -->
+                <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-[#06C755] text-white rounded-full font-bold text-lg hover:bg-[#05b34c] transition-colors duration-300 shadow-md hover:shadow-lg flex justify-center items-center gap-2">
                     <i data-lucide="message-circle" class="w-6 h-6"></i>
                     公式LINEにメッセージを送る
                 </a>
                 
-                <p class="text-xs text-gray-500 mt-6 text-left">
+                <p class="text-xs text-gray-500 mt-6 text-left leading-relaxed">
                     ※施工中や平日の本業中は返信が遅れる場合がございます。<br>
                     ※施工は当店（茨城県龍ケ崎市）へのお持ち込みとなります。詳しい住所はご予約確定時にお伝えいたします。
                 </p>
