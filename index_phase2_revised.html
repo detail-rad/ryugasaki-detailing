@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryugasaki Auto Detailing | 龍ケ崎市の週末限定・完全予約制カーディテーリング</title>
+    <meta name="description" content="茨城県龍ケ崎市の週末限定・完全予約制カーディテーリング。純水洗車、スケール除去、硬化型コーティング、研磨を一人の施工者が担当します。">
+    <link rel="canonical" href="https://ryugasaki-ad.com/">
+    <meta name="theme-color" content="#121212">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="Ryugasaki Auto Detailing | 龍ケ崎市の週末限定カーディテーリング">
+    <meta property="og:description" content="時間をかけてでも、愛車に納得の仕上がりを。純水洗車・スケール除去・硬化型コーティング・研磨に対応します。">
+    <meta property="og:url" content="https://ryugasaki-ad.com/">
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kamikaze-gold': '#B89B72', /* 落ち着いたアッシュゴールドに変更 */
+                        'kamikaze-gold-light': '#D4C1A0',
+                        'kamikaze-dark': '#121212', /* 真っ黒からマットなダークグレーへ */
+                        'kamikaze-gray': '#1E1E1E', /* 少し明るめのグレー */
+                        'kamikaze-light': '#E5E5E5',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #E5E5E5;
+        }
+        .bg-hero {
+            background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        /* text-gradient-gold を削除しました */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(184, 155, 114, 0.15); /* ホバー時の影も控えめに */
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-kamikaze-gold selection:text-kamikaze-dark pb-20 md:pb-0">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-kamikaze-dark/90 backdrop-blur-md border-b border-kamikaze-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i data-lucide="sparkles" class="text-kamikaze-gold w-6 h-6"></i>
+                    <span class="font-bold text-xl tracking-wider text-white">RYUGASAKI <span class="text-kamikaze-gold">AUTO DETAILING</span></span>
+                </div>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#concept" class="text-gray-300 hover:text-kamikaze-gold transition-colors text-sm font-medium">この店について</a>
+                    <a href="#quality" class="text-gray-300 hover:text-kamikaze-gold transition-colors text-sm font-medium">設備と施工</a>
+                    <a href="#works" class="text-gray-300 hover:text-kamikaze-gold transition-colors text-sm font-medium">施工事例</a>
+                    <a href="#services" class="text-gray-300 hover:text-kamikaze-gold transition-colors text-sm font-medium">メニュー</a>
+                    
+                    <!-- SNS Icons -->
+                    <div class="flex items-center gap-3 border-l border-gray-700 pl-4 ml-2">
+                        <a href="https://www.instagram.com/ryugasaki_auto_detailing?igsh=ZndmeHBtOXhndGx4" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#E1306C] transition-colors" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.threads.com/@ryugasaki_auto_detailing" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Threads">
+                            <i data-lucide="at-sign" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+
+                    <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer" class="ml-2 bg-kamikaze-gold text-kamikaze-dark px-6 py-2 rounded-full font-bold hover:bg-kamikaze-gold-light transition-colors text-sm">LINEで予約</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" class="text-gray-300 hover:text-white">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-kamikaze-gray border-b border-kamikaze-gold/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#concept" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-kamikaze-gold">この店について</a>
+                <a href="#quality" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-kamikaze-gold">設備と施工</a>
+                <a href="#works" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-kamikaze-gold">施工事例 (SNS)</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-kamikaze-gold">メニュー</a>
+                
+                <div class="flex gap-4 px-3 py-4 border-t border-gray-700 mt-2">
+                    <a href="https://www.instagram.com/ryugasaki_auto_detailing?igsh=ZndmeHBtOXhndGx4" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-[#E1306C]">
+                        <i data-lucide="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://www.threads.com/@ryugasaki_auto_detailing" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white">
+                        <i data-lucide="at-sign" class="w-6 h-6"></i>
+                    </a>
+                </div>
+
+                <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 mt-2 text-base font-bold text-center text-kamikaze-dark bg-kamikaze-gold rounded-md">LINEで予約</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-hero min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+            <div class="max-w-3xl">
+                <p class="text-kamikaze-gold font-medium tracking-widest mb-4">IBARAKI RYUGASAKI / WEEKEND ONLY</p>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+                    時間をかけてでも、<br>
+                    愛車に<span class="text-kamikaze-gold">納得の仕上がり</span>を。
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-light">
+                    茨城県龍ケ崎市で、土・日・祝のみ営業しています。<br>
+                    一日に受ける台数を絞り、受付から引き渡しまで一人で担当します。<br>
+                    急いで終わらせるより、車の状態を見ながら必要な工程を行います。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="px-8 py-4 bg-transparent border border-kamikaze-gold text-kamikaze-gold text-center rounded-full font-bold hover:bg-kamikaze-gold hover:text-kamikaze-dark transition-all duration-300">
+                        メニューを見る
+                    </a>
+                    <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer" class="px-8 py-4 flex justify-center items-center gap-2 bg-[#06C755] text-white text-center rounded-full font-bold hover:bg-[#05b34c] transition-all duration-300">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        LINEで空き状況を確認
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Section -->
+    <section id="concept" class="py-24 bg-kamikaze-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">この店が<span class="text-kamikaze-gold">できるまで</span></h2>
+                <div class="w-24 h-1 bg-kamikaze-gold mx-auto"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto mb-20">
+                <div class="text-gray-300 text-base md:text-lg leading-loose space-y-6">
+                    <p>最初は、ママ友から「副業で洗車をやってみたら？」と言われたのがきっかけでした。気軽に利用できる洗車サービスを考えて始めました。</p>
+                    <p>でも実際に来てくださったのは、「安く早く」よりも、「時間がかかってもいいから、きれいにしてほしい」という方たちでした。</p>
+                    <p>施工を重ねるうちに、自分も中途半端な状態で返したくないと思うようになりました。そこで、施工内容と料金を見直し、自分が納得できる仕事を続けられる形に変えています。</p>
+                    <p>地域にきれいな車を増やしたいという気持ちは、始めた頃から変わっていません。</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center p-6 bg-kamikaze-gray rounded-2xl border border-white/5 card-hover">
+                    <div class="w-16 h-16 mx-auto bg-kamikaze-dark rounded-full flex items-center justify-center mb-6 border border-kamikaze-gold/30">
+                        <i data-lucide="zap" class="w-8 h-8 text-kamikaze-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">固着したスケールを、化学的に除去</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        通常の洗車では落ちにくいスケール（イオンデポジット・雨染み）を、専用の酸性ケミカルで除去します。状態を確認し、化学除去で残る場合は研磨をご案内します。
+                    </p>
+                </div>
+                
+                <div class="text-center p-6 bg-kamikaze-gray rounded-2xl border border-white/5 card-hover">
+                    <div class="w-16 h-16 mx-auto bg-kamikaze-dark rounded-full flex items-center justify-center mb-6 border border-kamikaze-gold/30">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-kamikaze-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">完全予約制・専任制</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        一日に施工する台数を限定し、受付・施工・引き渡しまで同じ施工者が担当します。途中で担当者が変わることはありません。
+                    </p>
+                </div>
+                
+                <div class="text-center p-6 bg-kamikaze-gray rounded-2xl border border-white/5 card-hover">
+                    <div class="w-16 h-16 mx-auto bg-kamikaze-dark rounded-full flex items-center justify-center mb-6 border border-kamikaze-gold/30">
+                        <i data-lucide="droplets" class="w-8 h-8 text-kamikaze-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-white">必要な施工だけをご提案</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        車の状態や保管環境を確認し、必要な工程を選びます。研磨やコーティングが不要な場合は、無理におすすめしません。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Section -->
+    <section id="quality" class="py-24 bg-kamikaze-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">使っている<span class="text-kamikaze-gold">設備と理由</span></h2>
+                <p class="text-gray-300 mb-6 leading-relaxed">
+                    設備は、見栄えではなく施工に必要かどうかで選んでいます。現在使っている主な設備と、その理由をご紹介します。
+                </p>
+            </div>
+            
+            <ul class="space-y-6 bg-kamikaze-gray p-8 rounded-2xl border border-white/5 shadow-xl">
+                <li class="flex items-start gap-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 text-kamikaze-gold shrink-0 mt-1"></i>
+                    <div>
+                        <strong class="text-white block mb-2 text-lg">純水器</strong>
+                        <span class="text-gray-400 text-sm leading-relaxed">水道水に含まれるミネラル分を抑えた純水を使用します。拭き上げ時の水ジミのリスクを減らし、細部まで落ち着いて仕上げるためです。</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 text-kamikaze-gold shrink-0 mt-1"></i>
+                    <div>
+                        <strong class="text-white block mb-2 text-lg">業務用高圧洗浄機</strong>
+                        <span class="text-gray-400 text-sm leading-relaxed">ケルヒャーの業務用高圧洗浄機を使用しています。塗装面に触れる前に、砂や泥などの付着物をできるだけ流すためです。</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4">
+                    <i data-lucide="check-circle" class="w-6 h-6 text-kamikaze-gold shrink-0 mt-1"></i>
+                    <div>
+                        <strong class="text-white block mb-2 text-lg">ポリッシャー</strong>
+                        <span class="text-gray-400 text-sm leading-relaxed">ShineMateのポリッシャーを使用します。塗装状態と目的に合わせて、機種・パッド・研磨剤を選びます。</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Works Section (SNS) -->
+    <section id="works" class="py-24 bg-[#161616] border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">最新の<span class="text-kamikaze-gold">施工事例</span></h2>
+            <div class="w-24 h-1 bg-kamikaze-gold mx-auto mb-8"></div>
+            <p class="text-gray-400 mb-12 text-lg leading-relaxed font-light">
+                施工前後の写真や、実際に行った工程をInstagramとThreadsで紹介しています。<br class="hidden md:block">
+                仕上がりだけでなく、「なぜその施工をしたか」もできるだけ載せています。
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <!-- Instagram Button (落ち着いたデザインに変更) -->
+                <a href="https://www.instagram.com/ryugasaki_auto_detailing?igsh=ZndmeHBtOXhndGx4" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-kamikaze-gray border border-gray-700 text-gray-300 rounded-full font-medium hover:border-[#E1306C] hover:text-[#E1306C] transition-all duration-300 shadow-md hover:shadow-lg">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                    Instagramで事例を見る
+                </a>
+                
+                <!-- Threads Button (落ち着いたデザインに変更) -->
+                <a href="https://www.threads.com/@ryugasaki_auto_detailing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 bg-kamikaze-gray border border-gray-700 text-gray-300 rounded-full font-medium hover:border-white hover:text-white transition-all duration-300 shadow-md hover:shadow-lg">
+                    <i data-lucide="at-sign" class="w-6 h-6"></i>
+                    Threadsで最新情報を確認
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-[#141414]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">メニュー・<span class="text-kamikaze-gold">料金表</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    車両サイズ（SS〜XL）により価格が異なります。ご自身の車種サイズが不明な場合は、LINEよりお気軽にお問い合わせください。
+                </p>
+                <div class="w-24 h-1 bg-kamikaze-gold mx-auto mt-6"></div>
+            </div>
+
+            
+<h3 class="text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">洗車サービス</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+    <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-white/10 flex flex-col card-hover">
+        <div class="p-6 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold mb-2 text-white">予防メンテナンス</h4>
+            <p class="text-sm text-gray-400 mb-4 flex-grow">酸性シャンプー洗浄と仕上げスプレーの2段階。日常的なメンテナンスに最適な基本メニューです。</p>
+            <p class="text-kamikaze-gold font-bold">¥5,000 〜 (税込)</p>
+        </div>
+    </div>
+    <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-kamikaze-gold/50 flex flex-col relative card-hover">
+        <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">おすすめ</div>
+        <div class="p-6 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold mb-2 text-white">リセットメンテナンス</h4>
+            <p class="text-sm text-gray-400 mb-4 flex-grow">通常の洗車で落ちにくい固着スケールを、専用の酸性ケミカルで除去します。塗装状態により研磨をご案内する場合があります。</p>
+            <p class="text-kamikaze-gold font-bold">¥10,000 〜 (税込)</p>
+        </div>
+    </div>
+    <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-white/10 flex flex-col card-hover">
+        <div class="p-6 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold mb-2 text-white">フルディテール</h4>
+            <p class="text-sm text-gray-400 mb-4 flex-grow">細部洗浄・油分除去・鉄粉除去まで行います。研磨をご希望の場合はこちらがベースとなります。</p>
+            <p class="text-kamikaze-gold font-bold">¥19,000 〜 (税込)</p>
+        </div>
+    </div>
+</div>
+
+<h3 class="text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">硬化型コーティング＆ボディ研磨</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+    <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-kamikaze-gold/50 flex flex-col relative card-hover">
+        <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">おすすめ</div>
+        <div class="p-6 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold mb-2 text-white">硬化型コーティング</h4>
+            <p class="text-sm text-gray-400 mb-4 flex-grow">ライト・1層・2層から選べます。すべてリセットメンテナンスとセットで施工し、下地を整えてからコーティングします。</p>
+            <p class="text-kamikaze-gold font-bold">¥25,500 〜 (税込・リセット込み)</p>
+        </div>
+    </div>
+    <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-white/10 flex flex-col card-hover">
+        <div class="p-6 flex-grow flex flex-col">
+            <h4 class="text-xl font-bold mb-2 text-white">ボディ研磨</h4>
+            <p class="text-sm text-gray-400 mb-4 flex-grow">軽研磨と2工程研磨をご用意しています。傷の深さや塗装状態を確認し、必要な研磨内容をご提案します。</p>
+            <p class="text-kamikaze-gold font-bold">¥15,000 〜 (税込・オプション)</p>
+        </div>
+    </div>
+</div>
+
+<h3 class="text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">その他オプション</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-white/5 card-hover">
+        <h4 class="text-lg font-bold mb-2 text-white">ガラスケア</h4>
+        <p class="text-sm text-gray-400 mb-3">ウロコ除去・撥水コート</p>
+        <p class="text-kamikaze-gold font-bold text-sm">¥2,000 〜 (税込)</p>
+    </div>
+    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-white/5 card-hover">
+        <h4 class="text-lg font-bold mb-2 text-white">内装クリーニング</h4>
+        <p class="text-sm text-gray-400 mb-3">本革・ファブリック専用クリーナーによる本格洗浄</p>
+        <p class="text-kamikaze-gold font-bold text-sm">¥7,000 〜 (税込)</p>
+    </div>
+    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-white/5 card-hover">
+        <h4 class="text-lg font-bold mb-2 text-white">樹脂パーツケア</h4>
+        <p class="text-sm text-gray-400 mb-3">白化・色褪せした樹脂パーツの艶戻し＋保護コーティング</p>
+        <p class="text-kamikaze-gold font-bold text-sm">¥2,000 〜 (税込)</p>
+    </div>
+</div>
+
+<div class="text-center">
+    <a href="./pricing.html" class="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-kamikaze-gold text-kamikaze-gold rounded-full font-bold hover:bg-kamikaze-gold hover:text-kamikaze-dark transition-all duration-300">
+        サイズ別の料金と施工内容を見る
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+</div>
+
+        </div>
+    </section>
+
+            <!-- Booking Section -->
+    <section id="booking" class="py-24 bg-kamikaze-dark border-t border-kamikaze-gold/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">ご予約・お問い合わせ</h2>
+            <p class="text-gray-300 mb-10 text-lg font-light">
+                当店は週末（土・日・祝）のみ稼働する<strong class="text-kamikaze-gold font-bold">完全予約制</strong>となっております。<br>
+                ご予約、空き状況の確認、お見積もりは公式LINEで承ります。
+            </p>
+            
+            <div class="bg-kamikaze-gray p-8 rounded-2xl border border-white/5 shadow-xl inline-block w-full max-w-lg mx-auto">
+                <i data-lucide="message-circle" class="w-10 h-10 text-[#06C755] mx-auto mb-4"></i>
+                <h3 class="text-2xl font-bold text-white mb-2">公式LINEからご予約・相談</h3>
+                <p class="text-sm text-gray-400 mb-8 font-light">車種・年式・希望日時と、気になる汚れや傷が分かる写真を送ってください。メニューが決まっていなくても大丈夫です。</p>
+                
+                <!-- LINE Button (光る影を消して落ち着いたデザインに) -->
+                <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer" class="block w-full py-4 bg-[#06C755] text-white rounded-full font-bold text-lg hover:bg-[#05b34c] transition-colors duration-300 shadow-md hover:shadow-lg flex justify-center items-center gap-2">
+                    <i data-lucide="message-circle" class="w-6 h-6"></i>
+                    公式LINEにメッセージを送る
+                </a>
+                
+                <p class="text-xs text-gray-500 mt-6 text-left leading-relaxed">
+                    ※施工中や平日の本業中は返信が遅れる場合がございます。<br>
+                    ※施工は当店（茨城県龍ケ崎市）へのお持ち込みとなります。詳しい住所はご予約確定時にお伝えいたします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="sparkles" class="text-kamikaze-gold w-5 h-5"></i>
+                        <span class="font-bold tracking-wider text-white">RYUGASAKI <span class="text-kamikaze-gold">AUTO DETAILING</span></span>
+                    </div>
+                    
+                    <!-- Footer SNS Icons -->
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.instagram.com/ryugasaki_auto_detailing?igsh=ZndmeHBtOXhndGx4" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-[#E1306C] transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.threads.com/@ryugasaki_auto_detailing" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-white transition-colors">
+                            <i data-lucide="at-sign" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-right text-sm text-gray-500 space-y-2">
+                    <p>所在地: 茨城県龍ケ崎市</p>
+                    <p>営業時間: 土曜日・日曜日・祝日 (完全予約制)</p>
+                    <p class="pt-4">&copy; 2026 Ryugasaki Auto Detailing. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 border-t border-white/10 bg-kamikaze-dark/95 backdrop-blur-md p-3">
+        <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer"
+           class="flex items-center justify-center gap-2 w-full py-3 bg-[#06C755] text-white rounded-full font-bold shadow-lg">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            LINEで空き状況・料金を相談
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            const isHidden = menu.classList.toggle('hidden');
+            btn.setAttribute('aria-expanded', String(!isHidden));
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                menu.classList.add('hidden'); // Close mobile menu if open
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

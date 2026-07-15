@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>料金表 | Ryugasaki Auto Detailing</title>
+    <meta name="description" content="Ryugasaki Auto Detailingの詳細料金表。洗車・コーティング・研磨・ガラスケア・内装クリーニング・樹脂パーツケアの全メニューを車両サイズ別に掲載。">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#121212">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kamikaze-gold': '#B89B72',
+                        'kamikaze-gold-light': '#D4C1A0',
+                        'kamikaze-dark': '#121212',
+                        'kamikaze-gray': '#1E1E1E',
+                        'kamikaze-light': '#E5E5E5',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { background-color: #121212; color: #E5E5E5; }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(184, 155, 114, 0.15); }
+    </style>
+</head>
+<body class="antialiased selection:bg-kamikaze-gold selection:text-kamikaze-dark pb-20 md:pb-0">
+
+    <!-- Simple header -->
+    <header class="bg-kamikaze-dark/95 backdrop-blur-md border-b border-kamikaze-gold/20 py-5 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="./index.html" class="flex items-center gap-2">
+                <i data-lucide="sparkles" class="text-kamikaze-gold w-5 h-5"></i>
+                <span class="font-bold tracking-wider text-white text-sm sm:text-base">RYUGASAKI <span class="text-kamikaze-gold">AUTO DETAILING</span></span>
+            </a>
+            <a href="./index.html" class="flex items-center gap-1 text-gray-400 hover:text-kamikaze-gold text-sm transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                トップページ
+            </a>
+        </div>
+    </header>
+
+    <section class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <p class="text-kamikaze-gold font-medium tracking-widest mb-3 text-sm">PRICE LIST</p>
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">メニュー・<span class="text-kamikaze-gold">料金表</span></h1>
+                <p class="text-gray-400 max-w-2xl mx-auto text-sm leading-relaxed">
+                    車両サイズ（SS〜XL）により価格が異なります。表示価格はすべて税込です。<br>
+                    車種サイズや車両状態を確認したうえで、施工前に最終金額をご案内します。
+                </p>
+                <div class="w-24 h-1 bg-kamikaze-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto mb-10 rounded-2xl border border-kamikaze-gold/25 bg-kamikaze-gray p-6 md:p-8">
+                <div class="flex items-start gap-4">
+                    <i data-lucide="info" class="w-6 h-6 text-kamikaze-gold shrink-0 mt-0.5"></i>
+                    <div>
+                        <h2 class="font-bold text-white mb-3">料金の見方</h2>
+                        <div class="space-y-2 text-sm text-gray-400 leading-relaxed">
+                            <p><span class="text-white font-medium">洗車メニュー</span>から、車の状態や目的に合うコースをお選びください。</p>
+                            <p><span class="text-white font-medium">硬化型コーティング</span>は、リセットメンテナンスへの追加施工です。合計料金を先に掲載しています。</p>
+                            <p><span class="text-white font-medium">研磨・ガラス・内装・樹脂パーツ</span>は必要な場合だけ追加できます。分からない場合は、LINEで車種と気になる点をお知らせください。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav aria-label="料金カテゴリ" class="mb-16 overflow-x-auto">
+                <div class="flex md:flex-wrap gap-2 min-w-max md:min-w-0 md:justify-center">
+                    <a href="#wash" class="px-4 py-2 rounded-full border border-white/10 bg-kamikaze-gray text-sm text-gray-300 hover:border-kamikaze-gold/60 hover:text-kamikaze-gold transition-colors">洗車</a>
+                    <a href="#coating" class="px-4 py-2 rounded-full border border-white/10 bg-kamikaze-gray text-sm text-gray-300 hover:border-kamikaze-gold/60 hover:text-kamikaze-gold transition-colors">コーティング</a>
+                    <a href="#polishing" class="px-4 py-2 rounded-full border border-white/10 bg-kamikaze-gray text-sm text-gray-300 hover:border-kamikaze-gold/60 hover:text-kamikaze-gold transition-colors">研磨</a>
+                    <a href="#glass" class="px-4 py-2 rounded-full border border-white/10 bg-kamikaze-gray text-sm text-gray-300 hover:border-kamikaze-gold/60 hover:text-kamikaze-gold transition-colors">ガラス</a>
+                    <a href="#interior" class="px-4 py-2 rounded-full border border-white/10 bg-kamikaze-gray text-sm text-gray-300 hover:border-kamikaze-gold/60 hover:text-kamikaze-gold transition-colors">内装</a>
+                    <a href="#resin" class="px-4 py-2 rounded-full border border-white/10 bg-kamikaze-gray text-sm text-gray-300 hover:border-kamikaze-gold/60 hover:text-kamikaze-gold transition-colors">樹脂パーツ</a>
+                </div>
+            </nav>
+
+<h3 id="wash" class="scroll-mt-28 text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">洗車サービス</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+  <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-white/10 flex flex-col card-hover">
+    <div class="p-6 flex-grow flex flex-col">
+      <h4 class="text-xl font-bold mb-2 text-white">予防メンテナンス</h4>
+      <p class="text-sm text-gray-400 mb-4 flex-grow">酸性シャンプー（RSE）による洗浄と、仕上げスプレー（FSE）による軽度の水垢除去・光沢仕上げの2段階。日常的なメンテナンスに最適な基本メニューです。</p>
+      <p class="text-kamikaze-gold font-bold">¥5,000 〜 (税込)</p>
+      <details class="mt-3 group">
+        <summary class="cursor-pointer text-xs text-kamikaze-gold hover:text-kamikaze-gold-light select-none list-none flex items-center gap-1">
+          <span>含まれる内容を見る</span>
+          <i data-lucide="chevron-down" class="w-3 h-3 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <ul class="mt-3 space-y-1.5 text-xs text-gray-400 border-t border-white/10 pt-3">
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>純水洗浄（酸性シャンプー RSE）</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>ホイール洗浄</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>窓拭き（内外）</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>ドア内拭き</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>完全拭き上げ</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>仕上げスプレー（FSE）による軽度水垢除去・光沢仕上げ</span></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+  <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-kamikaze-gold/50 flex flex-col relative card-hover">
+    <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMEND</div>
+    <div class="p-6 flex-grow flex flex-col">
+      <h4 class="text-xl font-bold mb-2 text-white">リセットメンテナンス</h4>
+      <p class="text-sm text-gray-400 mb-4 flex-grow">通常の洗車で落ちにくい、固着したスケール（イオンデポジット・雨染み）を専用の酸性ケミカルで除去します。塗装の状態を確認し、化学除去で残る場合は必要に応じて研磨をご案内します。</p>
+      <p class="text-kamikaze-gold font-bold">¥10,000 〜 (税込)</p>
+      <details class="mt-3 group">
+        <summary class="cursor-pointer text-xs text-kamikaze-gold hover:text-kamikaze-gold-light select-none list-none flex items-center gap-1">
+          <span>含まれる内容を見る</span>
+          <i data-lucide="chevron-down" class="w-3 h-3 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <ul class="mt-3 space-y-1.5 text-xs text-gray-400 border-t border-white/10 pt-3">
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>純水洗浄（酸性シャンプー RSE）</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>ホイール洗浄</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>窓拭き（内外）</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>ドア内拭き</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>完全拭き上げ</span></li>
+          <li class="flex items-start gap-2 text-kamikaze-gold-light"><i data-lucide="sparkles" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold"></i><span>固着したスケールの化学除去（専用酸性ケミカル）</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>仕上げスプレー（FSE）による光沢仕上げ</span></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+  <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-white/10 flex flex-col card-hover">
+    <div class="p-6 flex-grow flex flex-col">
+      <h4 class="text-xl font-bold mb-2 text-white">フルディテール</h4>
+      <p class="text-sm text-gray-400 mb-4 flex-grow">細部洗浄・油分除去・鉄粉除去まで行う徹底メニューです。研磨をご希望の場合はこちらがベースとなります。</p>
+      <p class="text-kamikaze-gold font-bold">¥19,000 〜 (税込)</p>
+      <details class="mt-3 group">
+        <summary class="cursor-pointer text-xs text-kamikaze-gold hover:text-kamikaze-gold-light select-none list-none flex items-center gap-1">
+          <span>含まれる内容を見る</span>
+          <i data-lucide="chevron-down" class="w-3 h-3 transition-transform group-open:rotate-180"></i>
+        </summary>
+        <ul class="mt-3 space-y-1.5 text-xs text-gray-400 border-t border-white/10 pt-3">
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>純水洗浄（酸性シャンプー RSE）</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>ホイール洗浄</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>窓拭き（内外）</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>ドア内拭き</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>完全拭き上げ</span></li>
+          <li class="flex items-start gap-2 text-gray-400"><i data-lucide="check" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold/70"></i><span>固着したスケールの化学除去（専用酸性ケミカル）</span></li>
+          <li class="flex items-start gap-2 text-kamikaze-gold-light"><i data-lucide="sparkles" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold"></i><span>細部洗浄（隙間・エンブレム周り・足回り等）</span></li>
+          <li class="flex items-start gap-2 text-kamikaze-gold-light"><i data-lucide="sparkles" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold"></i><span>油分除去</span></li>
+          <li class="flex items-start gap-2 text-kamikaze-gold-light"><i data-lucide="sparkles" class="w-3 h-3 mt-0.5 shrink-0 text-kamikaze-gold"></i><span>鉄粉除去</span></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>
+<p class="md:hidden text-[11px] text-gray-600 mb-2 flex items-center gap-1"><i data-lucide="move-horizontal" class="w-3 h-3"></i>表は横にスクロールできます</p>
+<div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
+    <table class="w-full text-sm text-left min-w-[560px]">
+      <thead class="bg-[#1a1a1a] text-kamikaze-gold uppercase text-xs tracking-wider">
+        <tr><th class="px-4 py-3 ">サイズ</th><th class="px-4 py-3 ">代表車種</th><th class="px-4 py-3 text-right">予防メンテナンス</th><th class="px-4 py-3 text-right">リセットメンテナンス</th><th class="px-4 py-3 text-right">フルディテール</th></tr>
+      </thead>
+      <tbody class="divide-y divide-white/5">
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">SS</td><td class="px-4 py-3 text-gray-400 text-xs">ミライース、ワゴンR 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥5,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥10,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥19,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">S</td><td class="px-4 py-3 text-gray-400 text-xs">フィット、ヤリス、N-BOX 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥6,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥12,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥21,000</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">M</td><td class="px-4 py-3 text-gray-400 text-xs">プリウス、カローラ、Cクラス 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥7,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥14,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥23,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">L</td><td class="px-4 py-3 text-gray-400 text-xs">ハリアー、RAV4、ヴォクシー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥8,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥17,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥26,000</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">LL</td><td class="px-4 py-3 text-gray-400 text-xs">アルファード</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥9,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥19,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥29,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">XL</td><td class="px-4 py-3 text-gray-400 text-xs">ランドクルーザー、ハイエース 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥10,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥21,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥32,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+<p class="text-xs text-gray-500 mb-8 leading-relaxed">※すべて税込価格。所要時間の目安は予防メンテナンス 1.25h〜／リセットメンテナンス 2.0h〜／フルディテール 4.0h〜（サイズにより変動）。</p>
+
+<h3 id="coating" class="scroll-mt-28 text-2xl font-bold mb-6 pl-4 border-l-4 border-kamikaze-gold">硬化型コーティング</h3>
+
+<div class="mb-8 rounded-xl border border-kamikaze-gold/25 bg-kamikaze-gold/5 p-5 md:p-6">
+  <p class="text-sm text-gray-300 leading-relaxed">
+    硬化型コーティングは、<strong class="text-white">リセットメンテナンスとセットで施工</strong>します。
+    まず下の合計料金をご確認ください。車両状態により研磨や鉄粉除去が必要な場合は、施工前にご相談します。
+  </p>
+</div>
+
+<div class="flex items-end justify-between gap-4 mb-3">
+  <p class="text-base font-bold text-white">リセットメンテナンス込みの合計料金</p>
+  <span class="text-xs text-gray-500">税込</span>
+</div>
+<p class="md:hidden text-[11px] text-gray-600 mb-2 flex items-center gap-1"><i data-lucide="move-horizontal" class="w-3 h-3"></i>表は横にスクロールできます</p>
+<div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
+    <table class="w-full text-sm text-left min-w-[560px]">
+      <thead class="bg-[#1a1a1a] text-kamikaze-gold uppercase text-xs tracking-wider">
+        <tr><th class="px-4 py-3 ">サイズ</th><th class="px-4 py-3 ">代表車種</th><th class="px-4 py-3 text-right">リセットメンテナンス</th><th class="px-4 py-3 text-right">+ライト 合計</th><th class="px-4 py-3 text-right">+1層 合計</th><th class="px-4 py-3 text-right bg-kamikaze-gold/10">2層 合計</th></tr>
+      </thead>
+      <tbody class="divide-y divide-white/5">
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">SS</td><td class="px-4 py-3 text-gray-400 text-xs">ミライース、ワゴンR 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥10,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥25,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥33,000</td><td class="px-4 py-3 text-right text-white font-bold bg-kamikaze-gold/10">¥54,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">S</td><td class="px-4 py-3 text-gray-400 text-xs">ヤリス、フィット 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥12,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥30,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥34,500</td><td class="px-4 py-3 text-right text-white font-bold bg-kamikaze-gold/10">¥58,000</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">M</td><td class="px-4 py-3 text-gray-400 text-xs">プリウス、カローラ 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥14,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥33,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥37,500</td><td class="px-4 py-3 text-right text-white font-bold bg-kamikaze-gold/10">¥63,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">L</td><td class="px-4 py-3 text-gray-400 text-xs">レヴォーグ、クラウン、ハリアー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥17,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥38,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥43,000</td><td class="px-4 py-3 text-right text-white font-bold bg-kamikaze-gold/10">¥73,000</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">LL</td><td class="px-4 py-3 text-gray-400 text-xs">アルファード 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥19,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥42,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥48,000</td><td class="px-4 py-3 text-right text-white font-bold bg-kamikaze-gold/10">¥83,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">XL</td><td class="px-4 py-3 text-gray-400 text-xs">ランドクルーザー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥21,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥47,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">¥54,500</td><td class="px-4 py-3 text-right text-white font-bold bg-kamikaze-gold/10">¥94,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+<p class="text-xs text-gray-500 mb-10 leading-relaxed">
+  ※コーティングの所要日数は1日です。研磨を同時に行う場合は原則2日間、車両をお預かりします。
+</p>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+  <div class="bg-[#1a1a1a] p-6 rounded-lg border border-white/5">
+    <h4 class="text-xl font-bold mb-3 text-kamikaze-gold">ライト</h4>
+    <p class="text-sm text-gray-400 leading-relaxed">初めて硬化型コーティングを試したい方向け。メンテナンス時には、必要に応じてオーバーコートを再施工します。</p>
+  </div>
+  <div class="bg-[#1a1a1a] p-6 rounded-lg border border-white/5">
+    <h4 class="text-xl font-bold mb-3 text-white">1層</h4>
+    <p class="text-sm text-gray-400 leading-relaxed">下地を整えたうえで硬化型コーティングを1層施工します。防汚性と日常の手入れのしやすさを重視したプランです。</p>
+  </div>
+  <div class="bg-[#1a1a1a] p-6 rounded-lg border border-kamikaze-gold/40 relative">
+    <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">おすすめ</div>
+    <h4 class="text-xl font-bold mb-3 text-white">2層</h4>
+    <p class="text-sm text-gray-400 leading-relaxed">プライマーとトップコートを重ねる2層構成です。艶・防汚性・耐久性のバランスを重視した主力プランです。</p>
+  </div>
+</div>
+
+<details class="mb-16 rounded-xl border border-white/10 bg-kamikaze-gray">
+  <summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-4">
+    <div>
+      <p class="font-bold text-white">追加料金の内訳を見る</p>
+      <p class="text-xs text-gray-500 mt-1">リセットメンテナンスを除いた、コーティング施工分の料金です。</p>
+    </div>
+    <i data-lucide="chevron-down" class="w-5 h-5 text-kamikaze-gold shrink-0"></i>
+  </summary>
+  <div class="px-4 pb-5 md:px-6 md:pb-6">
+    <p class="md:hidden text-[11px] text-gray-600 mb-2 flex items-center gap-1"><i data-lucide="move-horizontal" class="w-3 h-3"></i>表は横にスクロールできます</p>
+<div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
+    <table class="w-full text-sm text-left min-w-[560px]">
+      <thead class="bg-[#1a1a1a] text-kamikaze-gold uppercase text-xs tracking-wider">
+        <tr><th class="px-4 py-3 ">サイズ</th><th class="px-4 py-3 ">代表車種</th><th class="px-4 py-3 text-right">ライト</th><th class="px-4 py-3 text-right">1層</th><th class="px-4 py-3 text-right">2層</th><th class="px-4 py-3 text-right">オーバーコート再施工(ライト用)</th></tr>
+      </thead>
+      <tbody class="divide-y divide-white/5">
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">SS</td><td class="px-4 py-3 text-gray-400 text-xs">ミライース、ワゴンR 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥15,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥23,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥44,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥1,800</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">S</td><td class="px-4 py-3 text-gray-400 text-xs">ヤリス、フィット 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥18,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥22,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥46,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,100</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">M</td><td class="px-4 py-3 text-gray-400 text-xs">プリウス、カローラ 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥18,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥23,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥48,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,500</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">L</td><td class="px-4 py-3 text-gray-400 text-xs">レヴォーグ、クラウン、ハリアー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥21,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥26,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥56,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,100</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">LL</td><td class="px-4 py-3 text-gray-400 text-xs">アルファード 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥23,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥29,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥64,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,600</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">XL</td><td class="px-4 py-3 text-gray-400 text-xs">ランドクルーザー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥26,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥33,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥73,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,100</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</details>
+
+<h3 id="polishing" class="scroll-mt-28 text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">ボディ研磨 オプションプラン</h3>
+<p class="text-xs text-gray-500 mb-8 leading-relaxed">※リセットメンテナンス以上への追加オプションです。研磨には鉄粉除去済みの下地が必須です。フルディテールは鉄粉除去を含むためそのまま研磨をご依頼いただけますが、それ以外のコースの場合は「鉄粉除去（単体）」を合わせてご依頼ください（標準的な付着量を想定した価格です。著しい鉄粉付着が見られる場合は状態を確認のうえ追加料金をご相談させていただきます）。</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+  <div class="bg-[#1a1a1a] p-6 rounded-lg border border-white/5">
+    <h4 class="text-xl font-bold mb-3 text-kamikaze-gold">1工程 軽研磨（所要1日）</h4>
+    <p class="text-sm text-gray-400 leading-relaxed">軽微な洗車傷やくすみを整えるライトな研磨。塗装への負担を最小限に抑えつつ、コーティングの定着率と艶を引き上げます。</p>
+  </div>
+  <div class="bg-[#1a1a1a] p-6 rounded-lg border border-kamikaze-gold/40 relative">
+    <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMEND</div>
+    <h4 class="text-xl font-bold mb-3 text-white">2工程 標準研磨（所要2日）</h4>
+    <p class="text-sm text-gray-400 leading-relaxed">深めの傷を整える初期研磨と、研磨跡を整える仕上げ研磨の2段階です。塗装状態を確認しながら、傷やくすみをできる範囲で整えます。</p>
+  </div>
+</div>
+<p class="md:hidden text-[11px] text-gray-600 mb-2 flex items-center gap-1"><i data-lucide="move-horizontal" class="w-3 h-3"></i>表は横にスクロールできます</p>
+<div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
+    <table class="w-full text-sm text-left min-w-[560px]">
+      <thead class="bg-[#1a1a1a] text-kamikaze-gold uppercase text-xs tracking-wider">
+        <tr><th class="px-4 py-3 ">サイズ</th><th class="px-4 py-3 ">代表車種</th><th class="px-4 py-3 text-right">1工程</th><th class="px-4 py-3 text-right">2工程</th><th class="px-4 py-3 text-right">鉄粉除去（単体）</th></tr>
+      </thead>
+      <tbody class="divide-y divide-white/5">
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">SS</td><td class="px-4 py-3 text-gray-400 text-xs">ミライース、ワゴンR 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥15,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥30,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">S</td><td class="px-4 py-3 text-gray-400 text-xs">ヤリス、フィット 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥18,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥36,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,500</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">M</td><td class="px-4 py-3 text-gray-400 text-xs">プリウス、カローラ 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥20,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥40,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">L</td><td class="px-4 py-3 text-gray-400 text-xs">レヴォーグ、クラウン、ハリアー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥24,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥48,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,500</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">LL</td><td class="px-4 py-3 text-gray-400 text-xs">アルファード 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥28,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥56,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">XL</td><td class="px-4 py-3 text-gray-400 text-xs">ランドクルーザー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥32,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥64,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+<h3 id="glass" class="scroll-mt-28 text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">ガラスケア オプションプラン</h3>
+<p class="text-xs text-gray-500 mb-8 leading-relaxed">※どのコースにも追加いただけます。ウロコ除去は研磨機を使用した除去施工、撥水コートはウロコ除去後の保護コートです（単体でのご依頼も可能です）。</p>
+<p class="md:hidden text-[11px] text-gray-600 mb-2 flex items-center gap-1"><i data-lucide="move-horizontal" class="w-3 h-3"></i>表は横にスクロールできます</p>
+<div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
+    <table class="w-full text-sm text-left min-w-[560px]">
+      <thead class="bg-[#1a1a1a] text-kamikaze-gold uppercase text-xs tracking-wider">
+        <tr><th class="px-4 py-3 ">サイズ</th><th class="px-4 py-3 ">代表車種</th><th class="px-4 py-3 text-right">ウロコ除去</th><th class="px-4 py-3 text-right">撥水コート</th></tr>
+      </thead>
+      <tbody class="divide-y divide-white/5">
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">SS</td><td class="px-4 py-3 text-gray-400 text-xs">ミライース、ワゴンR 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">S</td><td class="px-4 py-3 text-gray-400 text-xs">ヤリス、フィット 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥5,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,500</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">M</td><td class="px-4 py-3 text-gray-400 text-xs">プリウス、カローラ 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥6,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">L</td><td class="px-4 py-3 text-gray-400 text-xs">レヴォーグ、クラウン、ハリアー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥7,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,500</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">LL</td><td class="px-4 py-3 text-gray-400 text-xs">アルファード 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥8,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">XL</td><td class="px-4 py-3 text-gray-400 text-xs">ランドクルーザー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥9,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+<h3 id="interior" class="scroll-mt-28 text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">内装クリーニング オプションプラン</h3>
+<p class="text-xs text-gray-500 mb-8 leading-relaxed">※どのコースにも追加いただけます。本革・ファブリックそれぞれ専用クリーナーによる本格洗浄です。</p>
+<p class="md:hidden text-[11px] text-gray-600 mb-2 flex items-center gap-1"><i data-lucide="move-horizontal" class="w-3 h-3"></i>表は横にスクロールできます</p>
+<div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
+    <table class="w-full text-sm text-left min-w-[560px]">
+      <thead class="bg-[#1a1a1a] text-kamikaze-gold uppercase text-xs tracking-wider">
+        <tr><th class="px-4 py-3 ">サイズ</th><th class="px-4 py-3 ">代表車種</th><th class="px-4 py-3 text-right">内装クリーニング</th></tr>
+      </thead>
+      <tbody class="divide-y divide-white/5">
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">SS</td><td class="px-4 py-3 text-gray-400 text-xs">ミライース、ワゴンR 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥7,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">S</td><td class="px-4 py-3 text-gray-400 text-xs">ヤリス、フィット 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥8,500</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">M</td><td class="px-4 py-3 text-gray-400 text-xs">プリウス、カローラ 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥9,500</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">L</td><td class="px-4 py-3 text-gray-400 text-xs">レヴォーグ、クラウン、ハリアー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥12,000</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">LL</td><td class="px-4 py-3 text-gray-400 text-xs">アルファード 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥15,500</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">XL</td><td class="px-4 py-3 text-gray-400 text-xs">ランドクルーザー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥18,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+<h3 id="resin" class="scroll-mt-28 text-2xl font-bold mb-8 pl-4 border-l-4 border-kamikaze-gold">樹脂パーツケア オプションプラン</h3>
+<p class="text-xs text-gray-500 mb-8 leading-relaxed">※どのコースにも追加いただけます。バンパー下部やドアモール等、経年で白化・色褪せした樹脂パーツの艶を戻すクリーニングと、その状態を保護する硬化型コーティングの2段階です。</p>
+<p class="md:hidden text-[11px] text-gray-600 mb-2 flex items-center gap-1"><i data-lucide="move-horizontal" class="w-3 h-3"></i>表は横にスクロールできます</p>
+<div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
+    <table class="w-full text-sm text-left min-w-[560px]">
+      <thead class="bg-[#1a1a1a] text-kamikaze-gold uppercase text-xs tracking-wider">
+        <tr><th class="px-4 py-3 ">サイズ</th><th class="px-4 py-3 ">代表車種</th><th class="px-4 py-3 text-right">クリーニング（艶戻し）</th><th class="px-4 py-3 text-right">コーティング（硬化型）</th></tr>
+      </thead>
+      <tbody class="divide-y divide-white/5">
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">SS</td><td class="px-4 py-3 text-gray-400 text-xs">ミライース、ワゴンR 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,800</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">S</td><td class="px-4 py-3 text-gray-400 text-xs">ヤリス、フィット 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,700</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥2,500</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">M</td><td class="px-4 py-3 text-gray-400 text-xs">プリウス、カローラ 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥5,500</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,000</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">L</td><td class="px-4 py-3 text-gray-400 text-xs">レヴォーグ、クラウン、ハリアー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥6,900</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥3,800</td></tr>
+      <tr class=" hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">LL</td><td class="px-4 py-3 text-gray-400 text-xs">アルファード 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥8,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥4,400</td></tr>
+      <tr class="bg-white/[0.02] hover:bg-white/5 transition-colors"><td class="px-4 py-3 font-bold text-white whitespace-nowrap">XL</td><td class="px-4 py-3 text-gray-400 text-xs">ランドクルーザー 等</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥9,000</td><td class="px-4 py-3 text-right text-kamikaze-gold font-bold">+¥5,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+
+            <div class="text-center mt-16 pt-10 border-t border-white/10">
+                <p class="text-gray-300 mb-3">ご不明な点やお見積りのご相談はお気軽にどうぞ</p>
+                <p class="text-xs text-gray-500 mb-6 leading-relaxed">
+                    車種・年式・気になる汚れや傷が分かる写真を送っていただけると、より具体的にご案内できます。
+                </p>
+                <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 bg-[#06C755] text-white rounded-full font-bold hover:bg-[#05b34c] transition-colors">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    公式LINEで相談・予約する
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 border-t border-white/10 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Ryugasaki Auto Detailing. All Rights Reserved.</p>
+    </footer>
+
+
+    <div class="md:hidden fixed bottom-0 inset-x-0 z-50 border-t border-white/10 bg-kamikaze-dark/95 backdrop-blur-md p-3">
+        <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer"
+           class="flex items-center justify-center gap-2 w-full py-3 bg-[#06C755] text-white rounded-full font-bold shadow-lg">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            LINEで車種・料金を相談
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
