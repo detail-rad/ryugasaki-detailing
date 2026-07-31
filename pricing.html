@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -33,19 +33,400 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body { background-color: #121212; color: #E5E5E5; }
-        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(184, 155, 114, 0.15); }
+        :root {
+            --ink: #202725;
+            --ink-soft: #53605c;
+            --deep: #1f2826;
+            --paper: #f4f1ea;
+            --paper-2: #ebe6dc;
+            --white: #fffdf9;
+            --line: #d6d0c5;
+            --accent: #a8752d;
+            --line-green: #06c755;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding-bottom: 0;
+            background: var(--paper) !important;
+            color: var(--ink) !important;
+            font-family: "Noto Sans JP", sans-serif !important;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            border-color: rgba(32, 39, 37, 0.12) !important;
+            background: rgba(255, 253, 249, 0.94) !important;
+            backdrop-filter: blur(14px);
+        }
+
+        header > div {
+            min-height: 34px;
+        }
+
+        header a:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0 !important;
+            line-height: 1.15;
+        }
+
+        header a:first-child span:first-child {
+            color: var(--ink) !important;
+            font-family: "Shippori Mincho", serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        header a:first-child small {
+            margin-top: 5px;
+            color: var(--ink-soft);
+            font-size: 0.58rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+        }
+
+        header a:last-child {
+            color: var(--ink-soft) !important;
+            font-weight: 600;
+        }
+
+        header a:last-child:hover {
+            color: var(--accent) !important;
+        }
+
+        body > section {
+            padding-block: 86px 112px !important;
+        }
+
+        body > section > div {
+            max-width: 1160px !important;
+        }
+
+        body > section > div > .text-center:first-child {
+            max-width: 760px;
+            margin-bottom: 72px !important;
+            text-align: left !important;
+        }
+
+        body > section > div > .text-center:first-child > p:first-child {
+            margin-bottom: 14px !important;
+            color: var(--accent) !important;
+            font-size: 0.72rem !important;
+            font-weight: 700;
+            letter-spacing: 0.18em !important;
+        }
+
+        h1,
+        h3,
+        h4 {
+            font-family: "Shippori Mincho", serif;
+        }
+
+        h1 {
+            margin-bottom: 22px !important;
+            color: var(--ink) !important;
+            font-size: clamp(2.4rem, 5vw, 4.2rem) !important;
+            font-weight: 600 !important;
+            line-height: 1.3;
+        }
+
+        body > section > div > .text-center:first-child > p:nth-of-type(2) {
+            margin: 0 !important;
+            color: var(--ink-soft) !important;
+            font-size: 0.92rem !important;
+            line-height: 1.9;
+        }
+
+        body > section > div > .text-center:first-child > div {
+            display: none;
+        }
+
+        h3 {
+            margin-top: 96px !important;
+            margin-bottom: 24px !important;
+            padding-left: 0 !important;
+            border-left: 0 !important;
+            color: var(--ink) !important;
+            font-size: clamp(1.7rem, 3vw, 2.35rem) !important;
+            font-weight: 600 !important;
+        }
+
+        body > section > div > h3:first-of-type {
+            margin-top: 0 !important;
+        }
+
+        section .grid {
+            gap: 0 !important;
+            margin-bottom: 28px !important;
+            border-top: 1px solid var(--line);
+        }
+
+        section .grid > div {
+            min-width: 0;
+            padding: 28px 26px !important;
+            border: 0 !important;
+            border-right: 1px solid var(--line) !important;
+            border-bottom: 1px solid var(--line) !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        section .grid > div:first-child {
+            border-left: 1px solid var(--line) !important;
+        }
+
+        section .grid h4 {
+            color: var(--ink) !important;
+            font-size: 1.15rem !important;
+            font-weight: 600 !important;
+        }
+
+        section .grid p {
+            color: var(--ink-soft) !important;
+        }
+
+        section .grid .text-kamikaze-gold {
+            color: var(--accent) !important;
+        }
+
+        section .grid .absolute {
+            top: 0 !important;
+            right: 0 !important;
+            border-radius: 0 !important;
+            background: var(--deep) !important;
+            color: var(--white) !important;
+            font-size: 0.62rem !important;
+            letter-spacing: 0.08em;
+        }
+
+        details {
+            border-top: 1px solid var(--line);
+        }
+
+        details summary {
+            padding-top: 13px;
+            color: var(--accent) !important;
+            font-weight: 700;
+        }
+
+        details ul {
+            border-color: var(--line) !important;
+        }
+
+        details li {
+            color: var(--ink-soft) !important;
+        }
+
+        .overflow-x-auto {
+            margin-bottom: 14px !important;
+            border: 1px solid var(--line) !important;
+            border-radius: 0 !important;
+            background: var(--white);
+        }
+
+        table {
+            border-collapse: collapse;
+            color: var(--ink);
+        }
+
+        thead {
+            background: var(--deep) !important;
+            color: var(--white) !important;
+        }
+
+        thead th {
+            padding: 15px 16px !important;
+            color: var(--white) !important;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.04em !important;
+            text-transform: none !important;
+        }
+
+        tbody {
+            border-color: var(--line) !important;
+        }
+
+        tbody tr {
+            background: transparent !important;
+        }
+
+        tbody tr:hover {
+            background: var(--paper-2) !important;
+        }
+
+        tbody td {
+            padding: 14px 16px !important;
+            border-color: var(--line) !important;
+        }
+
+        tbody td:first-child {
+            color: var(--ink) !important;
+            font-family: "Shippori Mincho", serif;
+        }
+
+        tbody td:nth-child(2) {
+            color: var(--ink-soft) !important;
+        }
+
+        tbody td.text-kamikaze-gold {
+            color: var(--accent) !important;
+        }
+
+        .text-gray-500,
+        .text-gray-400,
+        .text-gray-300 {
+            color: var(--ink-soft) !important;
+        }
+
+        .text-white {
+            color: var(--ink) !important;
+        }
+
+        body > section > div > p.text-xs {
+            margin-bottom: 56px !important;
+        }
+
+        body > section > div > p.text-sm.font-bold {
+            margin-top: 34px !important;
+            color: var(--ink) !important;
+            font-family: "Shippori Mincho", serif;
+            font-size: 1rem !important;
+        }
+
+        body > section > div > .text-center.mt-16 {
+            margin-top: 98px !important;
+            padding: 54px 24px !important;
+            border: 0 !important;
+            background: var(--deep);
+            color: var(--white);
+        }
+
+        body > section > div > .text-center.mt-16 p {
+            color: #c5cecb !important;
+        }
+
+        body > section > div > .text-center.mt-16 a {
+            border-radius: 4px !important;
+            background: var(--line-green) !important;
+            color: #fff !important;
+        }
+
+        footer {
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            background: #151b19 !important;
+            color: #85908c !important;
+        }
+
+        .card-hover,
+        .card-hover:hover {
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .mobile-line {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                padding-bottom: 72px;
+            }
+
+            header {
+                padding-block: 12px !important;
+            }
+
+            header a:first-child span:first-child {
+                font-size: 0.8rem;
+            }
+
+            header a:last-child {
+                font-size: 0.75rem !important;
+            }
+
+            body > section {
+                padding-block: 64px 80px !important;
+            }
+
+            body > section > div > .text-center:first-child {
+                margin-bottom: 48px !important;
+            }
+
+            section .grid > div {
+                border-left: 1px solid var(--line) !important;
+            }
+
+            h3 {
+                margin-top: 74px !important;
+            }
+
+            .overflow-x-auto {
+                margin-right: -16px;
+                border-right: 0 !important;
+            }
+
+            table {
+                min-width: 640px !important;
+            }
+
+            tbody td:first-child,
+            thead th:first-child {
+                position: sticky;
+                z-index: 1;
+                left: 0;
+            }
+
+            thead th:first-child {
+                background: var(--deep);
+            }
+
+            tbody td:first-child {
+                background: var(--white);
+            }
+
+            .mobile-line {
+                position: fixed;
+                z-index: 60;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                padding: 10px 12px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                background: rgba(31, 40, 38, 0.96);
+            }
+
+            .mobile-line a {
+                display: flex;
+                min-height: 52px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                background: var(--line-green);
+                color: #fff;
+                font-size: 0.9rem;
+                font-weight: 700;
+            }
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-kamikaze-gold selection:text-kamikaze-dark">
+<body class="antialiased">
 
-    <!-- Simple header -->
     <header class="bg-kamikaze-dark/95 backdrop-blur-md border-b border-kamikaze-gold/20 py-5 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <a href="./index.html" class="flex items-center gap-2">
-                <i data-lucide="sparkles" class="text-kamikaze-gold w-5 h-5"></i>
-                <span class="font-bold tracking-wider text-white text-sm sm:text-base">RYUGASAKI <span class="text-kamikaze-gold">AUTO DETAILING</span></span>
+            <a href="./index.html">
+                <span>RYUGASAKI AUTO DETAILING</span>
+                <small>IBARAKI / WEEKEND DETAILING</small>
             </a>
             <a href="./index.html" class="flex items-center gap-1 text-gray-400 hover:text-kamikaze-gold text-sm transition-colors">
                 <i data-lucide="arrow-left" class="w-4 h-4"></i>
@@ -72,7 +453,7 @@
   <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-white/10 flex flex-col card-hover">
     <div class="p-6 flex-grow flex flex-col">
       <h4 class="text-xl font-bold mb-2 text-white">予防メンテナンス</h4>
-      <p class="text-sm text-gray-400 mb-4 flex-grow">酸性シャンプーによる洗浄と、酸性仕上げスプレーによる軽度の水垢除去・光沢仕上げの2段階。日常的なメンテナンスに最適な基本メニューです。</p>
+      <p class="text-sm text-gray-400 mb-4 flex-grow">酸性シャンプーで洗浄し、仕上げスプレーで軽度の水垢を整えます。日常的なメンテナンス向けの基本メニューです。</p>
       <p class="text-kamikaze-gold font-bold">¥5,000 〜 (税込)</p>
       <details class="mt-3 group">
         <summary class="cursor-pointer text-xs text-kamikaze-gold hover:text-kamikaze-gold-light select-none list-none flex items-center gap-1">
@@ -94,7 +475,7 @@
     <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMEND</div>
     <div class="p-6 flex-grow flex flex-col">
       <h4 class="text-xl font-bold mb-2 text-white">リセットメンテナンス</h4>
-      <p class="text-sm text-gray-400 mb-4 flex-grow">一般的な水垢予防メニューとは異なり、すでに固着してしまったスケール（イオンデポジット・雨染み・ウロコ）そのものを、専用の酸性ケミカルで化学的に融解・除去します。他店で「これは落とせない」と言われた固着汚れにこそ対応する、予防の一歩先をいく洗車です。（固着が深く化学除去で残る場合は、別途研磨をご提案します）</p>
+      <p class="text-sm text-gray-400 mb-4 flex-grow">通常の洗車では落ちにくい固着スケールを、専用の酸性ケミカルで除去します。化学除去で残る場合は、塗装状態を確認したうえで研磨をご案内します。</p>
       <p class="text-kamikaze-gold font-bold">¥10,000 〜 (税込)</p>
       <details class="mt-3 group">
         <summary class="cursor-pointer text-xs text-kamikaze-gold hover:text-kamikaze-gold-light select-none list-none flex items-center gap-1">
@@ -116,7 +497,7 @@
   <div class="bg-kamikaze-gray rounded-xl overflow-hidden shadow-xl border border-white/10 flex flex-col card-hover">
     <div class="p-6 flex-grow flex flex-col">
       <h4 class="text-xl font-bold mb-2 text-white">フルディテール</h4>
-      <p class="text-sm text-gray-400 mb-4 flex-grow">細部洗浄・油分除去・鉄粉除去まで含む、専門店同等の徹底ディテール。研磨をご希望の場合はこちらがベースとなります。</p>
+      <p class="text-sm text-gray-400 mb-4 flex-grow">隙間やエンブレム周りの洗浄、油分除去、鉄粉除去まで行います。研磨をご希望の場合はこちらがベースとなります。</p>
       <p class="text-kamikaze-gold font-bold">¥22,000 〜 (税込)</p>
       <details class="mt-3 group">
         <summary class="cursor-pointer text-xs text-kamikaze-gold hover:text-kamikaze-gold-light select-none list-none flex items-center gap-1">
@@ -164,12 +545,12 @@
   </div>
   <div class="bg-[#1a1a1a] p-6 rounded-lg border border-white/5">
     <h4 class="text-xl font-bold mb-3 text-white">1層オプション</h4>
-    <p class="text-sm text-gray-400 leading-relaxed">下地処理を行った上に高品質な硬化型コーティングを施工。塗装本来の輝きと確かな防汚性を両立します。</p>
+    <p class="text-sm text-gray-400 leading-relaxed">下地を整えたうえで硬化型コーティングを1層施工し、塗装面を保護します。</p>
   </div>
   <div class="bg-[#1a1a1a] p-6 rounded-lg border border-kamikaze-gold/40 relative">
     <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMEND</div>
     <h4 class="text-xl font-bold mb-3 text-white">2層オプション</h4>
-    <p class="text-sm text-gray-400 leading-relaxed">プライマー＋トップコートの2層構造で、より深い艶と高い耐久性を実現する当店の主力プランです。</p>
+    <p class="text-sm text-gray-400 leading-relaxed">下地層とトップコートを重ねる2層構造。艶と保護性能のバランスを重視した当店の主力プランです。</p>
   </div>
 </div>
 <div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
@@ -215,7 +596,7 @@
   <div class="bg-[#1a1a1a] p-6 rounded-lg border border-kamikaze-gold/40 relative">
     <div class="absolute top-0 right-0 bg-kamikaze-gold text-kamikaze-dark text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMEND</div>
     <h4 class="text-xl font-bold mb-3 text-white">2工程 標準研磨（所要2日）</h4>
-    <p class="text-sm text-gray-400 leading-relaxed">深めの傷を整える初期研磨と、鏡面に仕上げる仕上げ研磨の2段階。経年車のダメージをリセットし、新車時以上の輝きを取り戻します。</p>
+    <p class="text-sm text-gray-400 leading-relaxed">傷やくすみを整える初期研磨と、研磨跡を整える仕上げ研磨の2段階。塗装状態を確認しながら進めます。</p>
   </div>
 </div>
 <div class="overflow-x-auto rounded-xl border border-white/10 mb-4">
@@ -303,6 +684,9 @@
         <p>&copy; 2026 Ryugasaki Auto Detailing. All Rights Reserved.</p>
     </footer>
 
+    <div class="mobile-line">
+        <a href="https://lin.ee/gdcz1XC" target="_blank" rel="noopener noreferrer">LINEで料金・施工内容を相談</a>
+    </div>
 
     <script>
     (() => {
